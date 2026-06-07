@@ -1,6 +1,11 @@
 ---
+<<<<<<< Updated upstream:skills/engineering/to-prd/SKILL.md
 name: to-prd
 description: Turn the current conversation context into a PRD and publish it to the project issue tracker. Use when user wants to create a PRD from the current context.
+=======
+name: write-a-prd
+description: Create a PRD through user interview, codebase exploration, and module design, then write it out as a Markdown file. Use when user wants to write a PRD, create a product requirements document, or plan a new feature.
+>>>>>>> Stashed changes:write-a-prd/SKILL.md
 ---
 
 This skill takes the current conversation context and codebase understanding and produces a PRD. Do NOT interview the user â€” just synthesize what you already know.
@@ -15,7 +20,11 @@ The issue tracker and triage label vocabulary should have been provided to you â
 
 Check with the user that these seams match their expectations.
 
+<<<<<<< Updated upstream:skills/engineering/to-prd/SKILL.md
 3. Write the PRD using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
+=======
+5. Once you have a complete understanding of the problem and solution, use the template below to write the PRD. Ask the user which team to file it under. Create the PRD as a Markdown file. Use Mermaid flowcharts for visualization of database models and Mermaid sequence diagrams for visualization of data flow.
+>>>>>>> Stashed changes:write-a-prd/SKILL.md
 
 <prd-template>
 

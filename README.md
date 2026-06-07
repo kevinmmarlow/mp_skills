@@ -156,6 +156,7 @@ Skills I use daily for code work.
 - **[to-prd](./skills/engineering/to-prd/SKILL.md)** — Turn the current conversation context into a PRD and submit it as a GitHub issue. No interview — just synthesizes what you've already discussed.
 - **[zoom-out](./skills/engineering/zoom-out/SKILL.md)** — Tell the agent to zoom out and give broader context or a higher-level perspective on an unfamiliar section of code.
 - **[prototype](./skills/engineering/prototype/SKILL.md)** — Build a throwaway prototype to flesh out a design — either a runnable terminal app for state/business-logic questions, or several radically different UI variations toggleable from one route.
+- **[write-a-tech-spec](./skills/engineering/write-a-tech-spec/SKILL.md)** — Create a staff-engineer-quality tech spec through user interview and codebase exploration, with explicit tradeoffs, alternatives, and risks.
 
 ### Productivity
 
@@ -174,3 +175,4 @@ Tools I keep around but rarely use.
 - **[migrate-to-shoehorn](./skills/misc/migrate-to-shoehorn/SKILL.md)** — Migrate test files from `as` type assertions to @total-typescript/shoehorn.
 - **[scaffold-exercises](./skills/misc/scaffold-exercises/SKILL.md)** — Create exercise directory structures with sections, problems, solutions, and explainers.
 - **[setup-pre-commit](./skills/misc/setup-pre-commit/SKILL.md)** — Set up Husky pre-commit hooks with lint-staged, Prettier, type checking, and tests.
+- **[find-skills](./skills/misc/find-skills/SKILL.md)** — Discover and install agent skills from the open skills ecosystem via `npx skills`.

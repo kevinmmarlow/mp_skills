@@ -4,7 +4,7 @@ description: Compact the current conversation into a handoff document for anothe
 argument-hint: "What will the next session be used for?"
 ---
 
-Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save to the temporary directory of the user's OS - not the current workspace.
+Write a handoff document summarising the current conversation so a fresh agent can continue the work. Save it to `~/.agents/<repo_name>/handoffs/YYYY-MM-DD-<short-topic-slug>.md` — create the directory if it doesn't exist (`mkdir -p ~/.agents/<repo_name>/handoffs`) and use today's date. The `<repo_name>` should match your current repo (i.e. if within `nova`, the handoffs path is `~/.agents/nova/handoffs/`). This location is durable across sessions. Read the file before writing to it.
 
 Include a "suggested skills" section in the document, which suggests skills that the agent should invoke.
 

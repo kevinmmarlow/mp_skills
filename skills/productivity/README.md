@@ -15,5 +15,4 @@ Reachable only when you type them (Claude Code: `disable-model-invocation: true`
 
 Model- or user-reachable (rich trigger phrasing so the model can reach for them).
 
-- **[caveman](./caveman/SKILL.md)** — Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler while keeping full technical accuracy.
 - **[grilling](./grilling/SKILL.md)** — Interview the user relentlessly about a plan, decision, or idea until every branch of the decision tree is resolved.

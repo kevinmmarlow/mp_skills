@@ -1,12 +1,12 @@
 # Issue tracker: Local Markdown
 
-Issues and PRDs for this repo live as markdown files in `~/.agents/<repo_name>/scratch/` — create the directory if it doesn't exist (`mkdir -p ~/.agents/<repo_name>/scratch`). The `<repo_name>` should match your current repo (i.e. if within `nova`, the path is `~/.agents/nova/scratch/`).
+Issues and specs (you may know a spec as a PRD) for this repo live as markdown files in `~/.agents/<repo_name>/scratch/` — create the directory if it doesn't exist (`mkdir -p ~/.agents/<repo_name>/scratch`). The `<repo_name>` should match your current repo (i.e. if within `nova`, the path is `~/.agents/nova/scratch/`).
 
 ## Conventions
 
 - One feature per directory: `~/.agents/<repo_name>/scratch/<feature-slug>/`
-- The PRD is `~/.agents/<repo_name>/scratch/<feature-slug>/PRD.md`
-- Implementation issues are `~/.agents/<repo_name>/scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01`
+- The spec is `~/.agents/<repo_name>/scratch/<feature-slug>/spec.md`
+- Implementation issues are one file per ticket at `~/.agents/<repo_name>/scratch/<feature-slug>/issues/<NN>-<slug>.md`, numbered from `01` — never a single combined tickets file
 - Triage state is recorded as a `Status:` line near the top of each issue file (see `triage-labels.md` for the role strings)
 - Comments and conversation history append to the bottom of the file under a `## Comments` heading
 
@@ -17,3 +17,14 @@ Create a new file under `~/.agents/<repo_name>/scratch/<feature-slug>/` (creatin
 ## When a skill says "fetch the relevant ticket"
 
 Read the file at the referenced path. The user will normally pass the path or the issue number directly.
+
+## Wayfinding operations
+
+Used by `/wayfinder`. The **map** is a file with one **child** file per ticket.
+
+- **Map**: `.scratch/<effort>/map.md` — the Notes / Decisions-so-far / Fog body.
+- **Child ticket**: `.scratch/<effort>/issues/NN-<slug>.md`, numbered from `01`, with the question in the body. A `Type:` line records the ticket type (`research`/`prototype`/`grilling`/`task`); a `Status:` line records `claimed`/`resolved`.
+- **Blocking**: a `Blocked by: NN, NN` line near the top. A ticket is unblocked when every file it lists is `resolved`.
+- **Frontier**: scan `.scratch/<effort>/issues/` for files that are open, unblocked, and unclaimed; first by number wins.
+- **Claim**: set `Status: claimed` and save before any work.
+- **Resolve**: append the answer under an `## Answer` heading, set `Status: resolved`, then append a context pointer (gist + link) to the map's Decisions-so-far in `map.md`.
